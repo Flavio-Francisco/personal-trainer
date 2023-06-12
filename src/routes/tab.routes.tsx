@@ -1,7 +1,8 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
 import { Home } from '../screens/Home';
-import { Sinlg } from '../screens/Sinlg';
 import { Treiner } from '../screens/Treiner';
+import { Status } from '../screens/Status';
 
 
 
@@ -16,7 +17,10 @@ export function TabRoutes(){
         name='Home'
         component={Home}
         options={{
-           headerShown:false,
+            headerTitle:'Seja Bem Vindo!',
+            headerTitleAlign:'center',
+            
+
         
         }}
         />
@@ -24,8 +28,19 @@ export function TabRoutes(){
         name='Treiner'
         component={Treiner}
         options={{
-            headerShown:false,
+            headerTitle:'Treinos',
+            headerTitleAlign:'center'
+           
          
+        }}
+        />
+            <Screen
+        name='Status'
+        component={Status}
+        options={{
+            headerShown:false,
+            
+          
         }}
         />
       </Navigator>
