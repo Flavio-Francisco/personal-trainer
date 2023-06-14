@@ -58,8 +58,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginBottom:'7%',
         marginTop:'5%'
-        
-
        
     },
     
