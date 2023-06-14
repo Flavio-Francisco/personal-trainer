@@ -12,19 +12,24 @@ export function Home(){
     return(
      <View style={styles.conteiner} >
       
-      
+      <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmit}>
+            <Image
+            style={styles.image}
+            source={require('../assets/avaliacao-fisica.png')}
+            />
+        
+      </TouchableOpacity>
      
        <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmit}>
             <Image
             style={styles.image}
             source={require('../assets/academia.png')}
             />
-        
       </TouchableOpacity>
     
        <TouchableOpacity style={styles.conteinerImage}>
         <Image
-            style={styles.image2}
+            style={styles.image}
             source={require('../assets/academia1.jpg')}
            />
         
@@ -49,10 +54,11 @@ const styles = StyleSheet.create({
         backgroundColor:'',
         alignItems: 'center',
         width:'100%',
-        height: '30%',
+        height: '25%',
         borderRadius: 10,
-        margin:10,
-        marginBottom:15,
+        marginBottom:'7%',
+        marginTop:'5%'
+        
 
        
     },
@@ -60,27 +66,12 @@ const styles = StyleSheet.create({
     image: {
         
         width:'95%',
-        height: 220,
-        borderRadius: 10,
-        
-        
-    },
-    image2: {
-        
-        width:'95%',
         height: 200,
         borderRadius: 10,
-        marginTop:10,
-    },
-    image3: {   
-        backgroundColor:Theme.COLORS.blue4,
-        width:200,
-        height: 150,
-        borderRadius: 10,
-        marginTop:5,
-        marginBottom:10
+       
         
     },
+ 
     
   
 })
