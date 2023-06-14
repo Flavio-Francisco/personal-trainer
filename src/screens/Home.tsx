@@ -2,6 +2,7 @@ import { View,Text, Image, TouchableOpacity,StyleSheet ,ImageBackground} from "r
 import { Theme } from "../../Themas";
 
 
+
 export function Home(){
     function handleSubmit(){
         let text = "Treinos"
@@ -11,11 +12,7 @@ export function Home(){
     return(
      <View style={styles.conteiner} >
       
-        <Image
-        style={styles.image3}
-        source={require('../assets/emoji-indiferente.jpeg')}
-        />
-       
+      
      
        <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmit}>
             <Image

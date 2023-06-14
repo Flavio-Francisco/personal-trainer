@@ -7,6 +7,9 @@ COLORS:{
     blue2:'#026773',
     blue1:'#3CA6A6',
     withe1:'#F2E3D5',
+    green:'#228b22',
+    yellow:'#ffff00',
+    red:'#ff0000'
 }  
  
 
