@@ -1,43 +1,68 @@
-import { View,Text, TouchableOpacity, FlatList,Image } from "react-native";
-import foto from '../assets/treino-A.png';
+import { View,Text, TouchableOpacity, FlatList,Image,StyleSheet } from "react-native";
+import treino_A from '../assets/treino-A.png';
+import treino_B from '../assets/treino-B.png';
+import treino_C from '../assets/treino-C.png';
+import treino_D from '../assets/treino-D.png';
 
-interface treiner{
-    id:string;
-    image:any;
-}
+
 
 export function Treiner(){
-    const Treino : treiner=[
+    const Treino =[
         {
             id:'A',
-            image :foto
+            image :treino_A
         },
         {
             id:'B',
-            image : <Image
-            source={require('../assets/treino-A.png')}/>
+            image :treino_B
         },
         {
             id:'C',
-            image : <Image
-            source={require('../assets/treino-A.png')}/>
+            image :treino_C
         },
         {
             id:'D',
-            image : <Image
-            source={require('../assets/treino-A.png')}/>
+            image :treino_D
         },
     ]
     return(
-     <View style={{flex:1, justifyContent:'center'}} >
+     <View style={style.conteine} >
         
       <FlatList 
       data={Treino}
-      renderItem={({item})=>< Treino image={item.image}/>}
+      horizontal
       keyExtractor={item => item.id}
+      renderItem={(item)=>(
+        <TouchableOpacity style={style.buttonImage}>
+          <Image 
+          style={style.image}
+          source={item.item.image}/>
+        </TouchableOpacity>
+        
+      )}
       />
      </View>
     );
 
-
 }
+
+const style = StyleSheet.create({
+
+    conteine:{
+        flex:1, 
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    buttonImage:{
+        gap:3,
+        alignContent:'space-between'
+    },
+    image:{
+        width:200,
+        height:100,
+        margin:5,
+        borderRadius:10,
+
+        
+    }
+})

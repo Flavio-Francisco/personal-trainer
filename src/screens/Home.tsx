@@ -1,18 +1,21 @@
-import { View,Text, Image, TouchableOpacity,StyleSheet ,ImageBackground} from "react-native";
+import { View, Image, TouchableOpacity,StyleSheet} from "react-native";
 import { Theme } from "../../Themas";
+import { useNavigation } from "@react-navigation/native";
+
 
 
 
 export function Home(){
-    function handleSubmit(){
-        let text = "Treinos"
-        return text
+    const navigation = useNavigation();
+
+    function handleSubmitTreiner(){
+       navigation.navigate('Treiner')
     }
 
     return(
      <View style={styles.conteiner} >
       
-      <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmit}>
+      <TouchableOpacity style={styles.conteinerImage} >
             <Image
             style={styles.image}
             source={require('../assets/avaliacao-fisica.png')}
@@ -20,7 +23,7 @@ export function Home(){
         
       </TouchableOpacity>
      
-       <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmit}>
+       <TouchableOpacity style={styles.conteinerImage} onPressIn={handleSubmitTreiner}>
             <Image
             style={styles.image}
             source={require('../assets/academia.png')}

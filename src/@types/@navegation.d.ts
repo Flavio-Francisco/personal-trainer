@@ -4,6 +4,7 @@ export declare global{
             Home:undefined;
             Sinlg:undefined;
             TabRoutes:undefined
+            Treiner:undefined
          }
     }
 }
