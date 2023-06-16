@@ -13,10 +13,8 @@
       "preview3": {
         "developmentClient": true
       },
-      "production": {},
-       "cli": { 
-        "requireCommit": true
-     } 
+      "production": {}
+    
     }
      
   }
