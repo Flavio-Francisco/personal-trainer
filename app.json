@@ -7,7 +7,7 @@
     "icon": "./assets/jade.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/jade.jpg",
+      "image": "./assets/jade2.png",
       "resizeMode": "contain",
       "backgroundColor": "#FFFFFF"
     },
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.flavioshow31.personaltrainer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6638308a-5e49-4711-8741-ec2d41125e23"
+      }
     }
   }
 }
