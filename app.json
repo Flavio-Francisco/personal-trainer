@@ -4,7 +4,7 @@
     "slug": "personal-trainer",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/jade.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/jade.jpg",
