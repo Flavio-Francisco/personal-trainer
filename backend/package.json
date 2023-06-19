@@ -4,14 +4,15 @@
   "description": "",
   "main": "./src/serve.ts",
   "scripts": {
-    "build":"tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
     "start": "node ./dist/server.js",
-    "dev":"npx tsx watch .src/serve.ts"
+    "dev": "npx tsx watch .src/serve.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cors": "^8.3.0",
     "fastify": "^4.18.0"
   }
 }
