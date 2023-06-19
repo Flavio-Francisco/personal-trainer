@@ -6,6 +6,14 @@
     "orientation": "portrait",
     "icon": "./assets/logo-jade.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/jade2.png",
       "resizeMode": "contain",
