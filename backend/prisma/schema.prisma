@@ -10,7 +10,121 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User{
+model AdmUser{
+  id  Int @id @default(autoincrement())
+  name String
+  email String
+  cref String
+  especialidade String
+}
+
+
+model Aluno{
   id Int @id @default(autoincrement())
-  video Bytes
+  createdAt DateTime @default(now())
+  name String
+  email String @unique
+
+  treino Treino[]
+  avaliacoa  AvaliacaoFisica[]
+
+}
+
+  model Treino{
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name String
+  objetivo String
+  grupo Int
+  exercico String
+  exercicoMobilidade String
+  reticao String
+
+  usuario    Aluno    @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+  }
+
+ model AvaliacaoFisica{
+  id Int @id @default(autoincrement())
+  name String
+  profissao String
+  dataNacimento DateTime
+  createdAt DateTime @default(now())
+                // anamnese
+  praticaAlgumaAtividade String
+  comoVeceTrabalha String
+  FumaBebe String
+  parenteComMorteInfarto String
+  senteDor String
+  qualIntensedade String
+  IntermitenteOuConstante String
+  limitaEmQueSituacao String
+  posicoesPioramDor String
+  tomaAlgumRemadio String
+  doencaCronica String
+  pesaoAterial Float       
+  frequenciaCardiaca Float
+     // composição corporal   
+  massa Float
+  estatura Float
+  imc Float
+   // dobras cutâneas
+  triceptal Float
+  sobescapular Float
+  peitoral Float
+  axiliarMedia Float
+  supraIliaca Float
+  abdiminal Float
+  coxa Float
+  gorduraCorporal Float
+  //definir
+  gorduraIdeal Float
+  pesoTotal Float
+  massaGordura Float
+  masaMagra Float
+  pesoIdeal Float
+  pesoExcesso Float
+  //perimetria
+  pescoco Float
+  ombro Float
+  peitoralPerimetria Float
+  bracoDRelachado Float
+  bracoERelachado Float
+  antebracoD Float
+  antebracoE Float
+  bracoEContraido Float
+  bracoDContraido Float
+  cintura Float
+  abdomen Float
+  quadril Float
+  coxaMediaD Float
+  panturrilhaD Float
+  coxaMediaE Float
+  paturilhaE Float
+  riscoCadioVascular Float
+  // força e resiatência muscular
+  flexaoBraco Float
+  flexibidade Float
+  resistenciaAbdominal Float
+             //avaliação global
+ agacamentoBracosACNota Float
+ // rotação de ombro
+  mao String 
+  nota Float
+  //FMS Quadril
+  notaD Float
+  notaE Float
+ // capacidade aeóbica (VO²) 
+ // teste submáximo de katch e McArdle para banco
+ fcBpm Float
+ // classificação
+ tornoseloParedNotaD Float
+ tornoseloParedNotaE Float
+ //indicadores Cardio respiratorios
+ presaaoAterialPos Float
+ frenquenciaCardiacaPos Float
+
+  avaliado Aluno @relation(fields: [avaliadoID], references: [id])
+  avaliadoID
+
 }
