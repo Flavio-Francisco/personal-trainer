@@ -6,7 +6,7 @@ import { prisma } from './lib/prisma';
 
 
 
-export async function UserAdm(fastify:FastifyInstance){
+export async function User(fastify:FastifyInstance){
     fastify.post('/aluno', async (resquest, reply)=>{
 
           // criando tipagem com zod
