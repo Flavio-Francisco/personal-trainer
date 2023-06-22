@@ -1,4 +1,5 @@
 import cors from "@fastify/cors";
+import jwt from "@fastify/jwt";
 import fastify from "fastify";
 
 
@@ -10,6 +11,9 @@ async function bootstrap() {
     
 
 server.register(cors,{origin:true})
+server.register(jwt,{
+    secret:'012345'  
+  })
 
 server.listen({port:3000},(erroe, address)=>{
     if (erroe) {
