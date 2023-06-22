@@ -7,15 +7,18 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL_Jade")
 }
 
 model AdmUser{
   id  Int @id @default(autoincrement())
   name String
-  email String
+  usuario String
+  senha String
+  email String @unique
   cref String
   especialidade String
+  adm Boolean
 }
 
 
@@ -24,9 +27,12 @@ model Aluno{
   createdAt DateTime @default(now())
   name String
   email String @unique
+  usuario String
+  senha String
+  adm Boolean
 
   treino Treino[]
-  avaliacoa  AvaliacaoFisica[]
+  avaliacao  AvaliacaoFisica[]
 
 }
 
@@ -40,7 +46,7 @@ model Aluno{
   exercicoMobilidade String
   reticao String
 
-  usuario    Aluno    @relation(fields: [usuarioId], references: [id])
+  usuario    Aluno    @relation(fields: [usuarioId], references:[id])
   usuarioId Int
   }
 
@@ -124,7 +130,7 @@ model Aluno{
  presaaoAterialPos Float
  frenquenciaCardiacaPos Float
 
-  avaliado Aluno @relation(fields: [avaliadoID], references: [id])
-  avaliadoID
+  avaliado Aluno @relation(fields: [avaliadoID], references:[id])
+  avaliadoID Int
 
 }
