@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/logo-jade.png",
     "userInterfaceStyle": "light",
+    
     "plugins": [
       [
         "expo-av",
@@ -14,6 +15,8 @@
         }
       ]
     ],
+  
+   
     "splash": {
       "image": "./assets/jade2.png",
       "resizeMode": "contain",

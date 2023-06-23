@@ -6,7 +6,7 @@ import React, { useCallback, useRef, useState } from "react";
 import jaja from '../assets/jaja.mp4';
 
 import VideoPlayer from 'expo-video-player'
-import { ResizeMode } from "expo-av";
+import { ResizeMode,Video } from "expo-av";
 
 
 interface Type{
@@ -61,9 +61,8 @@ export function CardTreiner({item}:Type){
                 videoProps={{
                     
                     shouldPlay: true,
-                    
+                    isLooping:true,
                     resizeMode: ResizeMode.COVER,
-                
                     source: require('../assets/jaja.mp4')
                     
                 }}
