@@ -31,23 +31,25 @@ model Aluno{
   senha String
   adm Boolean
 
-  treino Treino[]
-  avaliacao  AvaliacaoFisica[]
+  treinoID Treino[]
+  avaliacaoID  AvaliacaoFisica[]
+
+  
 
 }
 
   model Treino{
-  id Int @id @default(autoincrement())
+  id Int  @default(autoincrement())
   createdAt DateTime @default(now())
   name String
   objetivo String
   grupo Int
   exercico String
   exercicoMobilidade String
-  reticao String
+  repeticao String
 
   usuario    Aluno    @relation(fields: [usuarioId], references:[id])
-  usuarioId Int
+  usuarioId Int @id
   }
 
  model AvaliacaoFisica{

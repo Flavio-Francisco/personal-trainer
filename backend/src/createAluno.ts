@@ -8,7 +8,7 @@ import { athenticate } from "./plugins/athenticate";
 
 export async function createAluno(serve: FastifyInstance) {
    
-      serve.post('/create'/*,{onRequest:[athenticate]}*/,async(request ,reply)=>{
+      serve.post('/create',{onRequest:[athenticate]},async(request ,reply)=>{
 
         const typeAluno = z.object({
             name : z.string(),
@@ -43,12 +43,5 @@ export async function createAluno(serve: FastifyInstance) {
                 
             })
             return reply.status(200).send(createAluno);
-        
-        
-
     })  
-
-   
-
-    
 }

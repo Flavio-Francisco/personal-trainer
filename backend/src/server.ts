@@ -5,6 +5,7 @@ import { UserAdm } from "./userAdm";
 import { authUser } from "./auth";
 import { User } from "./aluno";
 import { createAluno } from "./createAluno";
+import { createTreino } from "./createTreino";
 
 
 async function bootstrap() {
@@ -25,6 +26,7 @@ server.register(UserAdm)
 server.register(authUser)
 server.register(User)
 server.register(createAluno)
+server.register(createTreino)
 
 
 
