@@ -6,6 +6,10 @@ import { authUser } from "./auth";
 import { User } from "./aluno";
 import { createAluno } from "./createAluno";
 import { createTreino } from "./createTreino";
+import getTreino from "./getreino";
+import getAluno from "./getAluno";
+import UptadeTreino from "./updateTreino";
+import { updateAluno } from "./updateAluno";
 
 
 async function bootstrap() {
@@ -27,7 +31,10 @@ server.register(authUser)
 server.register(User)
 server.register(createAluno)
 server.register(createTreino)
-
+server.register(getTreino)
+server.register(getAluno)
+server.register(UptadeTreino)
+server.register(updateAluno)
 
 
 

@@ -31,7 +31,7 @@ export async function createTreino(server:FastifyInstance) {
         }
         }) 
         // conferindo se o aluno tem treino
-        const aluno = nameAluno.map((t) =>t.name)
+       
         const[ id ]= nameAluno.map((t ) =>t.id)
         
         console.log(id);
