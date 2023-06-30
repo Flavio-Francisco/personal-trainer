@@ -35,6 +35,8 @@ export async function createTreino(server:FastifyInstance) {
         const[ id ]= nameAluno.map((t ) =>t.id)
         
         console.log(id);
+
+        // se existir um treino vai atualizar se não vai criar um novo
         
          const createTreino = await prisma.treino.upsert({
             where:{
@@ -56,12 +58,13 @@ export async function createTreino(server:FastifyInstance) {
                 repeticao:newTreino.repeticao,
                 objetivo:newTreino.objetivo,
                 exercicoMobilidade:newTreino.exercicoMobilidade,
-                usuarioId:id
+                
             }
          })   
          console.log(createTreino);
          
-          return reply.status(204).send({createTreino})
+         
+          return reply.status(201).send({createTreino})
             
     })
 
