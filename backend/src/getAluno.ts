@@ -4,7 +4,7 @@ import { z } from "zod";
 
 
 export default async function getAluno(serve:FastifyInstance) {
-    serve.get("/queryaluno/:name",async ( request,reply)=>{
+    serve.get("/queryaluno/:name"/*,{onRequest:[athenticate]}*/,async ( request,reply)=>{
 
 
         const typeName = z.object({

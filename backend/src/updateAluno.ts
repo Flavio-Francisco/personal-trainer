@@ -5,7 +5,7 @@ import { prisma } from "./lib/prisma";
 
 export async function updateAluno(serve:FastifyInstance) {
     
-    serve.put('/updatealuno/:id',async(request, reply)=>{
+    serve.put('/updatealuno/:id'/*,{onRequest:[athenticate]}*/,async(request, reply)=>{
 
         const type = z.object({
             id : z.string()

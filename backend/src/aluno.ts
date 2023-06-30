@@ -33,17 +33,20 @@ export async function User(fastify:FastifyInstance){
         email: true,
         adm:true,
         senha:true,
+        avaliacaoID:true,
+
         
-        treino:{
+        treinoID:{
           select:{
-            name:true,
-            reticao:true,
             exercico:true,
+            name:true,
+            grupo:true,
+            repeticao:true,
+
           },
 
-        },
-        avaliacao:true,
-              
+        }
+
       }
        });
       

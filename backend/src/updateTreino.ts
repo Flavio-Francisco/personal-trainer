@@ -3,7 +3,7 @@ import { prisma } from "./lib/prisma";
 import { z } from "zod";
 
 export default async function UptadeTreino(serve:FastifyInstance) {
-    serve.put("/updatetreino/:usuarioid",async (request, reply )=>{
+    serve.put("/updatetreino/:usuarioid"/*,{onRequest:[athenticate]}*/,async (request, reply )=>{
 
             const type =z.object({
                 usuarioid:z.string()

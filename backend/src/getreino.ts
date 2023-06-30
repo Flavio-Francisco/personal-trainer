@@ -3,7 +3,7 @@ import { prisma } from "./lib/prisma";
 import { z } from "zod";
 
 export default async function getTreino(serve:FastifyInstance) {
-    serve.get("/querytreino/:name",async (request, reply )=>{
+    serve.get("/querytreino/:name"/*,{onRequest:[athenticate]}*/,async (request, reply )=>{
 
         const typeName = z.object({
 

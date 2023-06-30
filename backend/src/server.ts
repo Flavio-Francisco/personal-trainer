@@ -10,6 +10,7 @@ import getTreino from "./getreino";
 import getAluno from "./getAluno";
 import UptadeTreino from "./updateTreino";
 import { updateAluno } from "./updateAluno";
+import { deleteAluno } from "./deleteAluno";
 
 
 async function bootstrap() {
@@ -35,7 +36,7 @@ server.register(getTreino)
 server.register(getAluno)
 server.register(UptadeTreino)
 server.register(updateAluno)
-
+server.register(deleteAluno)
 
 
 server.listen({port:3000},(erroe, address)=>{
